@@ -11,10 +11,17 @@
     "type": "git",
     "url": "git+https://github.com/RaMbo8315/code-busters.git"
   },
-  "author": "Henry Karl Ashley Stefany",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RaMbo8315/code-busters/issues"
   },
-  "homepage": "https://github.com/RaMbo8315/code-busters#readme"
+  "homepage": "https://github.com/RaMbo8315/code-busters#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mysql": "^2.15.0",
+    "sequelize": "^4.33.4",
+    "sequelize-cli": "^4.0.0"
+  }
 }
