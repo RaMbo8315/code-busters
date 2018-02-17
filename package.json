@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/RaMbo8315/code-busters/issues"
   },
-  "homepage": "https://github.com/RaMbo8315/code-busters#readme"
+  "homepage": "https://github.com/RaMbo8315/code-busters#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "sequelize": "^4.33.4"
+  }
 }
