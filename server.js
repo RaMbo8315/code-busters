@@ -1,15 +1,33 @@
-// Dependencies
+
 var express = require("express");
-var exphbs = require("express-handlebars");
 var bodyparser = require("body-parser");
+var exphbs = require("express-handlebars");
 var mysql = require("mysql");
 
-// Create an instance of the express app.
 var app = express();
+var PORT = process.env.PORT || 8080;
 
-// Specify the port.
-var port = 3306;
+var db = require("./models");
 
-// Set Handlebars as the default templating engine.
+
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use(bodyParser.json());
+
 app.engine("handlebars", exphbs({ defaultLayout: "home" }));
 app.set("view engine", "handlebars");
+
+require("./routes/api-route.js")(app);
+require("./routes/html-route.js")(app);
+
+db.sequilize.sync().then(function () {
+    app.listen(PORT, function () {
+        console.log("App listing on Port " + PORT);
+    });
+});
