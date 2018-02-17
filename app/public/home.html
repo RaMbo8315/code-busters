@@ -2,56 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+  <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Myeongjo" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <!-- Latest compiled and minified CSS -->
+    <!--Import Bootstrap.css-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-    <!-- Custome stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-</head>
+    <!-- CSS Stylesheet -->
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
 
-<body>
+    <!--mobile optimization-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <h1>WRKBXLY </h1>
+
+  </head>
+
+
+  <body>
+    <!-- Login Tab -->
+    <!-- <article> -->
     <div class="container">
-        <div class="jumbotron">
-            <h1>Hello, world!</h1>
+      <div class="card card-container">
+        <div class="login-signup">
+          <div class="row">
+            <div class="col-sm-6 nav-tab-holder">
+              <ul class="nav nav-tabs row" role="tablist">
+                <li role="presentation" class="active col-sm-6">
+                  <a href="home.html" aria-controls="home" role="tab" data-toggle="tab" href="#">User</a>
+                </li>
+                <li role="presentation" class="col-sm-6">
+                  <a href="admin.html" aria-controls="admin" role="tab" data-toggle="tab" href="#">Admin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                Row 1, col-md-4
-            </div>
-            <div class="col-md-4">
-                Row 1, col-md-4
-            </div>
-            <div class="col-md-4">
-                Row 1, col-md-4
-            </div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                Row 2, col-md-4
+        <!-- Form Input -->
+        <div role="tabpanel" class="tab-pane" id="home">
+          <div class="row" id="form">
+            <div class="col-sm-12 mobile-pull">
+              <article role="login">
+                <h3 class="text-center">
+                  <i class="fa fa-lock"></i> User Sign In</h3>
+                <form class="signup" action="index.html" method="post">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="User Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email Address">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password">
+                  </div>
+                  <!-- <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div> -->
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Please accept the terms and conditions to proceed with your request.
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-success btn-block" value="SUBMIT">
+                  </div>
+                </form>
+              </article>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+    <!-- </article> -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+  </body>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <!-- Custom Javascript -->
-    <script src="assets/javascript/game.js"></script>
-</body>
-
-</html>
+</Html>

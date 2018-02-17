@@ -1,5 +1,8 @@
+
 var express = require("express");
 var bodyparser = require("body-parser");
+var exphbs = require("express-handlebars");
+var mysql = require("mysql");
 
 var app = express();
 var PORT = process.env.PORT || 8080;
@@ -17,7 +20,8 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-app.use(express.static("public"));
+app.engine("handlebars", exphbs({ defaultLayout: "home" }));
+app.set("view engine", "handlebars");
 
 require("./routes/api-route.js")(app);
 require("./routes/html-route.js")(app);
