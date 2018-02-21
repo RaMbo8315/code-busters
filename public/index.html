@@ -1,29 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Dashboard with Off-canvas Sidebar</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">WRKBXLY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>
+        </div>
+      </div>
+</nav>
 
-<head>
-    <meta charset="UTF-8">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Myeongjo" rel="stylesheet">
+<div class="container-fluid">
+      
+      <div class="row row-offcanvas row-offcanvas-left">
+        
+         <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+           
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Overview</a></li>
+              <li><a href="http://bootstrapzero.com" target="_ext">Themes</a></li>
+              <li><a href="http://bootstrap.theme.cards" target="_ext">Analytics</a></li>
+              <li><a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Nav item</a></li>
+              <li><a href="">Nav item again</a></li>
+              <li><a href="">One more nav</a></li>
+              <li><a href="">Another nav item</a></li>
+              <li><a href="">More navigation</a></li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li><a href="">Nav item again</a></li>
+              <li><a href="">One more nav</a></li>
+              <li><a href="">Another nav item</a></li>
+            </ul>
+          
+        </div><!--/span-->
+        
+        <div class="col-sm-9 col-md-10 main">
+          
+          <!--toggle sidebar button-->
+          <p class="visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas"><i class="glyphicon glyphicon-chevron-left"></i></button>
+          </p>
+          
+		  <h1 class="page-header">
+            WRKBXLY Dashboard
+            <p class="lead">(<a href="http://www.bootply.com/128936">with off-canvas sidebar</a>)</p>
+          </h1>
 
-    <!--Import Bootstrap.css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+          <!-- <a href="https://placeholder.com"><img src="http://via.placeholder.com/350x150"></a> -->
 
-    <!-- CSS Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="./css/style.css">
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="http://via.placeholder.com/200/6666ff/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Create New Ticket</h4>
+              <!-- <span class="text-muted">Create New Ticket</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Open Tickets</h4>
+              <!-- <span class="text-muted">Open Tickets</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="http://via.placeholder.com/200/6666ff/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Assigned Tickets</h4>
+              <!-- <span class="text-muted">Assigned Tickets</span> -->
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder text-center">
+              <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+              <h4>Completed Tickets</h4>
+              <!-- <span class="text-muted">Completed Tickets</span> -->
+            </div>
+          </div>
+          
+          <hr>
 
-    <!--mobile optimization-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-</head>
+          <h2 class="sub-header">Ticket List</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Ticket Number</th>
+                  <th>Date Created</th>
+                  <th>Client Name</th>
+                  <th>Assigned Agent</th>
+                  <th>Ticket Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1001</td>
+                  <td>01/03/2018</td>
+                  <td>Ipsum Corp.</td>
+                  <td>Tommy Davis</td>
+                  <td>complete</td>
+                </tr>
+                <tr>
+                  <td>1002</td>
+                  <td>01/13/2018</td>
+                  <td>Ipsum Corp.</td>
+                  <td>Jacob Teel</td>
+                  <td>complete</td>
+                </tr>
+                <tr>
+                  <td>1003</td>
+                  <td>01/15/2018</td>
+                  <td>Cloud LLC.</td>
+                  <td>Lisa Tims</td>
+                  <td>complete</td>
+                </tr>
+                <tr>
+                  <td>1004</td>
+                  <td>01/20/2018</td>
+                  <td>Cloud LLC.</td>
+                  <td>Tommy Davis</td>
+                  <td>complete</td>
+                </tr>
+                <tr>
+                  <td>1005</td>
+                  <td>01/23/2018</td>
+                  <td>Pike Company</td>
+                  <td>Kevin John</td>
+                  <td>In Progress</td>
+                </tr>
+                <tr>
+                  <td>1006</td>
+                  <td>01/25/2018</td>
+                  <td>Pike Company</td>
+                  <td>Karla Long</td>
+                  <td>complete</td>
+                </tr>
+                <tr>
+                  <td>1007</td>
+                  <td>02/5/2018</td>
+                  <td>Ipsum Corp.</td>
+                  <td>Tommy Davis</td>
+                  <td>In Progress</td>
+                </tr>
+                <tr>
+                  <td>1008</td>
+                  <td>02/14/2018</td>
+                  <td>Ipsum Corp.</td>
+                  <td>Tommy Davis</td>
+                  <td>In Progress</td>
+                </tr>
+                <tr>
+                  <td>1009</td>
+                  <td>02/17/2018</td>
+                  <td>Ipsum Corp.</td>
+                  <td>Tommy Davis</td>
+                  <td>Open</td>
+                </tr>
+                <tr>
+                  <td>1010</td>
+                  <td>02/17/2018</td>
+                  <td>Cloud LLC.</td>
+                  <td>Kevin John</td>
+                  <td>Open</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-<h1> Dashboard</h1>
+          <a href="http://www.bootply.com/gkTHCwjLO9">Get the Source Code</a> | <a href="http://bootstrap.theme.cards">More free Bootstrap themes</a>
+          
+      </div><!--/row-->
+	</div>
+</div><!--/.container-->
 
-<body>
-
-</body>
-
+<footer>
+  <p class="pull-right">©2016 Company</p>
+</footer>
+        
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
 </html>
