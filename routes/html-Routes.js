@@ -1,8 +1,7 @@
- var homeControllers = require("../controllers/home");
- var adminControllers = require("../controllers/admin");
+ var homeControllers = require("../controllers/login");
 
  module.exports = function(app){
-   app.get("/home", homeControllers.renderHome);
+   app.get("/client", homeControllers.renderUser);
  
    app.get("/admin", adminControllers.renderAdmin);
  };
