@@ -3,29 +3,29 @@
 
 <head>
   <meta charset="UTF-8">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Myeongjo" rel="stylesheet">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Myeongjo" rel="stylesheet">
 
-    <!--Import Bootstrap.css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!--Import Bootstrap.css-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-    <!-- CSS Stylesheet -->
-    <link type="text/css" rel="stylesheet" href="./css/style.css">
+  <!-- CSS Stylesheet -->
+  <link type="text/css" rel="stylesheet" href="/public/css/style.css">
 
-    <!--mobile optimization-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+  <!--mobile optimization-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  
+</head>
+
+
+<body>
     <h1>WRKBXLY </h1>
-
-  </head>
-
-
-  <body>
-    <!-- Login Tab -->
-    <!-- <article> -->
+  <!-- Login Tab -->
+  <article>
     <div class="container">
       <div class="card card-container">
         <div class="login-signup">
@@ -33,7 +33,7 @@
             <div class="col-sm-6 nav-tab-holder">
               <ul class="nav nav-tabs row" role="tablist">
                 <li role="presentation" class="active col-sm-6">
-                  <a href="home.html" aria-controls="home" role="tab" data-toggle="tab" href="#">User</a>
+                  <a href="client.html" aria-controls="home" role="tab" data-toggle="tab" href="#">User</a>
                 </li>
                 <li role="presentation" class="col-sm-6">
                   <a href="admin.html" aria-controls="admin" role="tab" data-toggle="tab" href="#">Admin</a>
@@ -49,42 +49,138 @@
             <div class="col-sm-12 mobile-pull">
               <article role="login">
                 <h3 class="text-center">
-                  <i class="fa fa-lock"></i> User Sign In</h3>
+                  <i class="fa fa-lock"></i> Client Sign In</h3>
                 <form class="signup" action="index.html" method="post">
+                  <!-- <div class="form-group">
+                      <input type="text" class="form-control" placeholder="User Name">
+                    </div> -->
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="User Name">
+                    <input type="email" class="form-control" placeholder="User Name (Email Address)">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email Address">
+                    <input type="phone" class="form-control" placeholder="Phone">
                   </div>
-
                   <div class="form-group">
                     <input type="password" class="form-control" placeholder="Password">
                   </div>
-                  <!-- <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Confirm Password">
-                  </div> -->
                   <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Confirm Password">
+                  </div>
+                  <div class="form-group">
+
                     <div class="checkbox">
                       <label>
                         <input type="checkbox"> Please accept the terms and conditions to proceed with your request.
                       </label>
                     </div>
                   </div>
+
+
                   <div class="form-group">
                     <input type="submit" class="btn btn-success btn-block" value="SUBMIT">
                   </div>
+
                 </form>
+
+                <div>
+                  <!-- Button to open the modal -->
+                  <button onclick="document.getElementById('id01').style.display='block'">Create an Account</button>
+                </div>
               </article>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- </article> -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  </article>
 
-  </body>
+  <!-- Registration Form -->
 
-</Html>
+  <!-- The Modal (contains the Sign Up form) -->
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
+    <form class="modal-content" action="index.html">
+      <div class="container">
+        <h2>
+          <b>Sign Up</b>
+        </h2>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="firstName">
+          <b>First Name</b>
+        </label>
+        <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+
+        <label for="lastName">
+          <b>Last Name</b>
+        </label>
+        <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+
+        <label for="phoneNumber">
+          <b>Phone Number</b>
+        </label>
+        <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
+
+        <label for="textinput">
+          <b>Address Line 1</b>
+          <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+
+          <label for="textinput">
+            <b>Address Line 2</b>
+          </label>
+          <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>
+
+
+          <label for="text">
+            <b>City</b>
+          </label>
+          <input type="text" id="city" placeholder="City" class="form-control" required>
+
+          <label for="text">
+            <b>State</b>
+          </label>
+          <input type="text" class="form-group" id="state" placeholder="State" class="form-control" required>
+
+
+          <label for="text">
+            <b>Postal Code</b>
+          </label>
+          <input type="text" class="form-control" id="postalCode" placeholder="Post Code" required>
+
+          <label for="email">
+            <b>Email</b>
+          </label>
+          <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+
+          <label for="psw">
+            <b>Password</b>
+          </label>
+          <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat">
+            <b>Repeat Password</b>
+          </label>
+          <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+
+          <p>By creating an account you agree to our
+            <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signup">Create an Account</button>
+          </div>
+      </div>
+    </form>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
