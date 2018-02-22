@@ -1,4 +1,4 @@
-var db = require("../models/tickets");
+var ticketControllers = require("../controllers/tickets");
 
 module.exports = function (app) {
     app.get("/api/admin", function (req, res) {
@@ -7,26 +7,10 @@ module.exports = function (app) {
         });
     });
 
-    app.post("/api/admin", function (req, res) {
-        db.Tickets.create({
-            name: req.body.name,
-            address: req.body.address,
-            phoneNumber: req.body.PhoneNumber,
-            service: req.body.service,
-        }).then(function (dbTicket) {
-            res.json(dbTicket);
-        });
-    });
+    // need to set up ticket controllerfor create
+    app.post("/api/admin", ticketControllers.createTicket);
 
-    app.put("/api/admin", function (req, res) {
-        db.Tickets.update(req.body, {
-            where: {
-                assigned_to: req.body
-            }
-        }).then(function (dbTicket) {
-            res.json(dbTicket);
-        });
-    });
+    app.put("/api/admin", ticketControllers.updateTicket);
 
     app.get("/api/admin", function (req, res) {
         db.Tickets.findOne({
