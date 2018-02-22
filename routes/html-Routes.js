@@ -4,6 +4,8 @@
    app.get("/", loginControllers.renderClient);
  
    app.get("/admin", loginControllers.renderAdmin);
+
+   app.get("/dashboard", loginControllers.renderAdminDash);
  };
 
 //  module.exports = function(app) {
