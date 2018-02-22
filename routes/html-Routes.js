@@ -1,9 +1,9 @@
- var homeControllers = require("../controllers/login");
+ var loginControllers = require("../controllers/login");
 
  module.exports = function(app){
-   app.get("/client", homeControllers.renderUser);
+   app.get("/", loginControllers.renderClient);
  
-   app.get("/admin", adminControllers.renderAdmin);
+   app.get("/admin", loginControllers.renderAdmin);
  };
 
 //  module.exports = function(app) {

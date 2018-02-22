@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     comments: DataTypes.TEXT,
-    pending: DataTypes.BOOLEAN,
+    inStatus: DataTypes.BOOLEAN,
     complete: DataTypes.BOOLEAN
   });
 

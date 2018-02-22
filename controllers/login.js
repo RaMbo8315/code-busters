@@ -1,7 +1,7 @@
 
 module.exports = {
-    renderUser: function(req, res){
-        res.render("client");
+    renderClient: function(req, res){
+        res.render("index");
     },
     renderAdmin: function(req, res){
         res.render("admin");
