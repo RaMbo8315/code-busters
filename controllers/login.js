@@ -7,6 +7,6 @@ module.exports = {
         res.render("admin", {css: ['style.css']});
     },
     renderAdminDash: function(req, res){
-        res.render("dashboard");
+        res.render("dashboard", {css: ['styles.css', 'bootstrap.min.css']});
     }
 };
