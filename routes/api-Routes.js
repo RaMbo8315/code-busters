@@ -1,15 +1,20 @@
-var ticketControllers = require("../controllers/tickets");
-var agentControllers = require("../controllers/agents");
+var dataControllers = require("../controllers/data");
 
 module.exports = function (app) {
-    app.get("/api/admin", allTickets);
-
     // need to set up ticket controller for create
-    app.post("/api/admin", ticketControllers.createTicket);
+    app.post("/api/admin", dataControllers.createTicket);
 
-    app.put("/api/admin", ticketControllers.updateTicket);
+    app.put("/api/admin", dataControllers.updateTicket);
 
-    app.get("/api/admin", findTicket);
+    app.get("/api/admin", dataControllers.findTicket);
 
-    app.post("/api/agents", createAgent)
+    app.get("/api/admin", dataControllers.allTickets);
+
+    app.post("/api/createAgents", dataControllers.createAgent);
+
+    app.post("/api/createClient", dataControllers.createClient)
+
+    app.get("/api/createClient", dataControllers.allClients)
+
+    app.get("/api/createClient", dataControllers.findClient)
 }

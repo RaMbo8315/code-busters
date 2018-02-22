@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="UTF-8">
 	<title>WRKBXLY</title>
+	<meta name="generator" content="Bootply" />
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora|Nanum+Myeongjo" rel="stylesheet">
@@ -12,18 +14,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	    crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- CSS Stylesheet -->
-	<link type="text/css" rel="stylesheet" href="/css/style.css">
-
+	{{#each css}}
+	<link type="text/css" rel="stylesheet" href="/css/{{this}}" /> 
+	{{/each}}
 	<!--mobile optimization-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
 	{{{ body }}}
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
