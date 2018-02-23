@@ -1,277 +1,408 @@
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">WRKBXLY</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#">Dashboard</a>
-            </li>
-            <li>
-              <a href="#">Settings</a>
-            </li>
-            <li>
-              <a href="#">Profile</a>
-            </li>
-            <li>
-              <a href="#">Help</a>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
-    </nav>
-  
-    <div class="container-fluid">
-  
-      <div class="row row-offcanvas row-offcanvas-left">
-  
-        <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
-  
-          <ul class="nav nav-sidebar">
-            <li class="active">
-              <a href="#">Overview</a>
-            </li>
-            <li>
-              <!-- Create Ticket Side Nav -->
-              <!-- <a href="http://bootstrapzero.com" target="_ext">Themes</a> -->
-              <button type="button" class="btn btn-success btn-lg" id="circleOne" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create Ticket</button>
-  
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h2 class="modal-title" id="exampleModalLabel">Service Ticket Form</h2>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">WRKBXLY</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Settings</a>
+        </li>
+        <li>
+          <a href="#">Profile</a>
+        </li>
+        <li>
+          <a href="#">Help</a>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <input type="text" class="form-control" placeholder="Search...">
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+
+  <div class="row row-offcanvas row-offcanvas-left">
+
+    <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+
+      <ul class="nav nav-sidebar">
+        <li class="active">
+          <a href="#">Overview Functions</a>
+        </li>
+        <li>
+          <!-- Create Ticket Side Nav -->
+          <!-- <a href="http://bootstrapzero.com" target="_ext">Themes</a> -->
+          <button type="button" class="btn btn-success btn-lg" id="ceateATicket" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create Ticket</button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModalLabel">Service Ticket Form</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="user-name" class="form-control-label">Client Name:</label>
+                      <input type="text" class="form-control" id="clientId">
                     </div>
-                    <div class="modal-body">
+                    <div class="form-group">
+                      <label for="service-reason" class="form-control-label">Assigned Tech:</label>
+                      <input type="text" class="form-control" id="assignedTech">
                       <form>
                         <div class="form-group">
-                          <label for="user-name" class="form-control-label">Client Name:</label>
-                          <input type="text" class="form-control" id="clientId">
-                        </div>
-                        <div class="form-group">
-                          <label for="service-reason" class="form-control-label">Assigned Tech:</label>
-                          <input type="text" class="form-control" id="assignedTech">
-                          <form>
-                            <div class="form-group">
-                              <label for="sel1">Select Service Reasons (select one):</label>
-                              <select class="form-control" id="selected-service">
-                                <option>Break-Fix</option>
-                                <option>Multimedia Setup</option>
-                                <option>Applications Update</option>
-                                <option>Service Connection</option>
-                                <option>Network Setup</option>
-                                <option>Security Update</option>
-                                <option>System Patch/ Refresh</option>
-                                <option>General Question</option>
-                              </select>
-                              <br>
-                            </div>
-                          </form>
-                        </div>
-                        <div class="form-group">
-                          <label for="message-text" class="form-control-label">Comments:</label>
-                          <textarea class="form-control" id="comments-text"></textarea>
+                          <label for="sel1">Select Service Reasons (select one):</label>
+                          <select class="form-control" id="selected-service">
+                            <option>Break-Fix</option>
+                            <option>Multimedia Setup</option>
+                            <option>Applications Update</option>
+                            <option>Service Connection</option>
+                            <option>Network Setup</option>
+                            <option>Security Update</option>
+                            <option>System Patch/ Refresh</option>
+                            <option>General Question</option>
+                          </select>
+                          <br>
                         </div>
                       </form>
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" id="modalSubmitBtn" class="btn btn-primary" data-dismiss="modal">Submit Ticket</button>
+                    <div class="form-group">
+                      <label for="message-text" class="form-control-label">Comments:</label>
+                      <textarea class="form-control" id="comments-text"></textarea>
                     </div>
-                  </div>
+                  </form>
                 </div>
-              </div> 
-            </li>
-            <li>
-              <a href="http://bootstrap.theme.cards" target="_ext">Analytics</a>
-            </li>
-            <li>
-              <a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a>
-            </li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li>
-              <a href="">Nav item</a>
-            </li>
-            <li>
-              <a href="">Nav item again</a>
-            </li>
-            <li>
-              <a href="">One more nav</a>
-            </li>
-            <li>
-              <a href="">Another nav item</a>
-            </li>
-            <li>
-              <a href="">More navigation</a>
-            </li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li>
-              <a href="">Nav item again</a>
-            </li>
-            <li>
-              <a href="">One more nav</a>
-            </li>
-            <li>
-              <a href="">Another nav item</a>
-            </li>
-          </ul>
-  
-        </div>
-        </span>
-  
-        <div class="col-sm-9 col-md-10 main">
-  
-          <!--toggle sidebar button-->
-          <p class="visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
-              <i class="glyphicon glyphicon-chevron-left"></i>
-            </button>
-          </p>
-  
-          <h1 class="page-header">
-            WRKBXLY Dashboard
-            <!-- <p class="lead">(
-              <a href="http://www.bootply.com/128936">with off-canvas sidebar</a>)</p> -->
-          </h1>
-  
-  
-            <!-- First Circle that Displays Open Ticket -->
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Open Tickets</h4>
-              <span class="text-muted">Open Tickets</span>
-            </div>
-  
-            <!-- Second Circle that Displays Assigned Tickets -->
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="http://via.placeholder.com/200/6666ff/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Assigned Tickets</h4> 
-              <span class="text-muted">Assigned Tickets</span> 
-            </div>
-  
-            <!-- Third Circle that Displays Completed Tickets -->
-            <div class="col-xs-6 col-sm-3 placeholder text-center">
-              <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-              <h4>Completed Tickets</h4> 
-              <span class="text-muted">Completed Tickets</span>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="modalSubmitBtn" class="btn btn-primary" data-dismiss="modal">Submit Ticket</button>
+                </div>
+              </div>
             </div>
           </div>
-  
-          <hr>
-  
-          <h2 class="sub-header">Ticket List</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Ticket Number</th>
-                  <th>Date Created</th>
-                  <th>Client Name</th>
-                  <th>Assigned Agent</th>
-                  <th>Ticket Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1001</td>
-                  <td>01/03/2018</td>
-                  <td>Ipsum Corp.</td>
-                  <td>Tommy Davis</td>
-                  <td>complete</td>
-                </tr>
-                <tr>
-                  <td>1002</td>
-                  <td>01/13/2018</td>
-                  <td>Ipsum Corp.</td>
-                  <td>Jacob Teel</td>
-                  <td>complete</td>
-                </tr>
-                <tr>
-                  <td>1003</td>
-                  <td>01/15/2018</td>
-                  <td>Cloud LLC.</td>
-                  <td>Lisa Tims</td>
-                  <td>complete</td>
-                </tr>
-                <tr>
-                  <td>1004</td>
-                  <td>01/20/2018</td>
-                  <td>Cloud LLC.</td>
-                  <td>Tommy Davis</td>
-                  <td>complete</td>
-                </tr>
-                <tr>
-                  <td>1005</td>
-                  <td>01/23/2018</td>
-                  <td>Pike Company</td>
-                  <td>Kevin John</td>
-                  <td>In Progress</td>
-                </tr>
-                <tr>
-                  <td>1006</td>
-                  <td>01/25/2018</td>
-                  <td>Pike Company</td>
-                  <td>Karla Long</td>
-                  <td>complete</td>
-                </tr>
-                <tr>
-                  <td>1007</td>
-                  <td>02/5/2018</td>
-                  <td>Ipsum Corp.</td>
-                  <td>Tommy Davis</td>
-                  <td>In Progress</td>
-                </tr>
-                <tr>
-                  <td>1008</td>
-                  <td>02/14/2018</td>
-                  <td>Ipsum Corp.</td>
-                  <td>Tommy Davis</td>
-                  <td>In Progress</td>
-                </tr>
-                <tr>
-                  <td>1009</td>
-                  <td>02/17/2018</td>
-                  <td>Ipsum Corp.</td>
-                  <td>Tommy Davis</td>
-                  <td>Open</td>
-                </tr>
-                <tr>
-                  <td>1010</td>
-                  <td>02/17/2018</td>
-                  <td>Cloud LLC.</td>
-                  <td>Kevin John</td>
-                  <td>Open</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-  
-          <a href="http://www.bootply.com/gkTHCwjLO9">Get the Source Code</a> |
-          <a href="http://bootstrap.theme.cards">More free Bootstrap themes</a>
-  
+        </li>
+
+
+
+        {{!--
+        <a href="http://bootstrap.theme.cards" target="_ext">Analytics</a> --}}
+        <!-- Registration Form -->
+
+        <!-- The Modal (contains the Sign Up form) -->
+        <div>
+          <!-- Button to open the modal -->
+          <button type="button" class="btn btn-success btn-lg" onclick="document.getElementById('id01').style.display='block'">Create Client Account</button>
         </div>
-        </row>
+        <div id="id01" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
+          <form class="modal-content" action="index.html">
+            <div class="container">
+              <h2>
+                <b>Sign Up For An Account</b>
+              </h2>
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <div>
+                <label for="firstName">
+                  <b>First Name</b>
+                </label>
+                <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+              </div>
+
+              <div>
+                <label for="lastName">
+                  <b>Last Name</b>
+                </label>
+                <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+              </div>
+
+              <div>
+                <label for="phoneNumber">
+                  <b>Phone Number</b>
+                </label>
+                <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
+              </div>
+
+              <div>
+                <label for="textinput">
+                  <b>Address Line 1</b>
+                </label>
+                <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+              </div>
+
+              <div>
+                <label for="textinput">
+                  <b>Address Line 2</b>
+                </label>
+                <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>
+              </div>
+
+              <div>
+                <label for="textinput">
+                  <b>City</b>
+                </label>
+                <input type="text" id="city" placeholder="City" class="form-control" required>
+              </div>
+
+              <div>
+                <label for="textinput">
+                  <b>State</b>
+                </label>
+                <input type="text" id="state" placeholder="State" class="form-control" required>
+              </div>
+
+              <div>
+                <label for="textinput">
+                  <b>Postal Code</b>
+                </label>
+                <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
+              </div>
+
+              <div>
+                <label for="email">
+                  <b>Email</b>
+                </label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+              </div>
+
+              <div>
+                <label for="psw">
+                  <b>Password</b>
+                </label>
+                <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+              </div>
+
+              <div>
+                <label for="psw-repeat">
+                  <b>Repeat Password</b>
+                </label>
+                <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+              </div>
+
+              <div>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                </label>
+                <b> Remember me</b>
+              </div>
+
+              <div>
+                <p>By creating an account you agree to our
+                  <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+              </div>
+
+              <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+
+              <div>
+                <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
+              </div>
+            </div>
+          </form>
+        </div>
+     
+
+        {{!-- NAV Bar --}}
+        <div>
+          </li>
+          <li>
+            <a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a>
+          </li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li>
+          <a href="" id="viewAllTech">View All Techs </a>
+        </li>
+        <li>
+          <a href="" id="viewAllClients">View All Clients</a>
+        </li>
+        <li>
+          <a href="" id="viewTicketsById">View Tickets By Id</a>
+        </li>
+        <li>
+          <a href="">Another nav item</a>
+        </li>
+        <li>
+          <a href="">More navigation</a>
+        </li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li>
+          <a href="">Nav item again</a>
+        </li>
+        <li>
+          <a href="">One more nav</a>
+        </li>
+        <li>
+          <a href="">Another nav item</a>
+        </li>
+      </ul>
+
       </div>
+      </span>
+
+      <div class="col-sm-9 col-md-10 main">
+
+        <!--toggle sidebar button-->
+        <p class="visible-xs">
+          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+          </button>
+        </p>
+
+        <h1 class="page-header">
+          WRKBXLY Dashboard
+          <!-- <p class="lead">(
+              <a href="http://www.bootply.com/128936">with off-canvas sidebar</a>)</p> -->
+        </h1>
+
+
+        <!-- First Circle that Displays Open Ticket -->
+        <div class="col-xs-6 col-sm-3 placeholder text-center">
+          <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+          <h4>Open Tickets</h4>
+          <a href="" id="adminViewAllTickets"> Open Tickets</a>
+        </div>
+
+        <!-- Second Circle that Displays Assigned Tickets -->
+        <div class="col-xs-6 col-sm-3 placeholder text-center">
+          <img src="http://via.placeholder.com/200/6666ff/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+          <h4>Assigned Tickets</h4>
+          <a href="" id="adminAssignedTickets">Assigned Tickets</a>
+        </div>
+
+        <!-- Third Circle that Displays Completed Tickets -->
+        <div class="col-xs-6 col-sm-3 placeholder text-center">
+          <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+          <h4>Completed Tickets</h4>
+          <a href="" id="adminCompletedTickets">Completed Tickets</a>
+        </div>
+      </div>
+
+      <hr>
+
+      <h2 class="sub-header">Ticket List</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Ticket Number</th>
+              <th>Date Created</th>
+              <th>Client Name</th>
+              <th>Assigned Tech</th>
+              <th>Ticket Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="ticketNumber">
+                <a>1001</a>
+              </td>
+              <td id="dateCreated">
+                <a>01/03/2018</a>
+              </td>
+              <td id="clientName">
+                <a>Ipsum Corp.</a>
+              </td>
+              <td id="assignedTech">
+                <a>Tommy Davis</a>
+              </td>
+              <td id="ticketStatus">
+                <a>complete</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1002</td>
+              <td>01/13/2018</td>
+              <td>Ipsum Corp.</td>
+              <td>Jacob Teel</td>
+              <td>complete</td>
+            </tr>
+            <tr>
+              <td>1003</td>
+              <td>01/15/2018</td>
+              <td>Cloud LLC.</td>
+              <td>Lisa Tims</td>
+              <td>complete</td>
+            </tr>
+            <tr>
+              <td>1004</td>
+              <td>01/20/2018</td>
+              <td>Cloud LLC.</td>
+              <td>Tommy Davis</td>
+              <td>complete</td>
+            </tr>
+            <tr>
+              <td>1005</td>
+              <td>01/23/2018</td>
+              <td>Pike Company</td>
+              <td>Kevin John</td>
+              <td>In Progress</td>
+            </tr>
+            <tr>
+              <td>1006</td>
+              <td>01/25/2018</td>
+              <td>Pike Company</td>
+              <td>Karla Long</td>
+              <td>complete</td>
+            </tr>
+            <tr>
+              <td>1007</td>
+              <td>02/5/2018</td>
+              <td>Ipsum Corp.</td>
+              <td>Tommy Davis</td>
+              <td>In Progress</td>
+            </tr>
+            <tr>
+              <td>1008</td>
+              <td>02/14/2018</td>
+              <td>Ipsum Corp.</td>
+              <td>Tommy Davis</td>
+              <td>In Progress</td>
+            </tr>
+            <tr>
+              <td>1009</td>
+              <td>02/17/2018</td>
+              <td>Ipsum Corp.</td>
+              <td>Tommy Davis</td>
+              <td>Open</td>
+            </tr>
+            <tr>
+              <td>1010</td>
+              <td>02/17/2018</td>
+              <td>Cloud LLC.</td>
+              <td>Kevin John</td>
+              <td>Open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <a href="http://www.bootply.com/gkTHCwjLO9">Get the Source Code</a> |
+      <a href="http://bootstrap.theme.cards">More free Bootstrap themes</a>
+
     </div>
-    </container>
-  
-    <footer>
-      <p class="pull-right">©2016 Company</p>
-    </footer>
-  
+    </row>
+  </div>
+</div>
+</container>
+
+<footer>
+  <p class="pull-right">©2016 Company</p>
+</footer>

@@ -1,5 +1,4 @@
-<h1>
-  WRKBXLY </h1>
+<h1> WRKBXLY </h1>
 
 <div class="container">
   <div class="card card-container">
@@ -27,11 +26,11 @@
               <i class="fa fa-lock"></i> Client Sign In</h3>
             <form class="signup" action="index.html" method="post">
               <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email Address">
+                <input type="email" class="form-control" placeholder="Email Address" required>
               </div>
 
               <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password" required>
               </div>
               <!-- <div class="form-group">
                     <input type="password" class="form-control" placeholder="Confirm Password">
@@ -47,95 +46,150 @@
                 <input type="submit" class="btn btn-success btn-block" id="clientLoginBtn" value="SUBMIT">
               </div>
             </form>
-             <div>
-                  <!-- Button to open the modal -->
-                  <button onclick="document.getElementById('id01').style.display='block'">Create an Account</button>
-                </div>
+            <div>
+              <!-- Button to open the modal -->
+              {{!--
+              <button onclick="document.getElementById('id01').style.display='block'">Create an Account</button> --}}
+              <div class="modal-footer">
+                <p onclick="document.getElementById('id01').style.display='block'"> Not a member ?
+                  <a href="#">Create an Account</a>
+                </p>
+                <p>Forgot
+                  <a href="#">Password ?</a>
+                </p>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </div>
-  </div>
 </div>
+    <script>
+      $(document).ready(function () {
+        $("#myBtn").click(function () {
+          $("#myModal").modal();
+        });
+      });
+    </script>
+
+  </div>
+
+{{!-- </div>
+</div>
+</div>
+</div>
+</div> --}}
 
 <!-- Registration Form -->
 
-  <!-- The Modal (contains the Sign Up form) -->
-  <div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
-    <form class="modal-content" action="index.html">
-      <div class="container">
-        <h2>
-          <b>Sign Up</b>
-        </h2>
-        <p>Please fill in this form to create an account.</p>
-        <hr>
+<!-- The Modal (contains the Sign Up form) -->
+<div id="id01" class="modal">
+  <div onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</div>
+  <form class="modal-content" action="modal">
+    <div class="container">
+      <h2>
+        <b>Create an Account</b>
+      </h2>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <div>
         <label for="firstName">
           <b>First Name</b>
         </label>
         <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+      </div>
 
+      <div>
         <label for="lastName">
           <b>Last Name</b>
         </label>
         <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+      </div>
 
+      <div>
         <label for="phoneNumber">
           <b>Phone Number</b>
         </label>
         <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
-        
+      </div>
+
+      <div>
         <label for="textinput">
           <b>Address Line 1</b>
-          <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+        </label>
+        <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+      </div>
 
-      <label for="textinput">
-        <b>Address Line 2</b></label>
-          <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>  
-
-      
+      <div>
         <label for="textinput">
-          <b>City</b></label>
-          <input type="text" id="city" placeholder="City" class="form-control" required>
-     
+          <b>Address Line 2</b>
+        </label>
+        <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>
+      </div>
 
-      <label for="textinput">
-        <b>State</b>
-      </label>
-      <input type="text" class="form-group" id="state" placeholder="State" class="form-control" required>
+      <div>
+        <label for="textinput">
+          <b>City</b>
+        </label>
+        <input type="text" id="city" placeholder="City" class="form-control" required>
+      </div>
 
+      <div>
+        <label for="textinput">
+          <b>State</b>
+        </label>
+        <input type="text" id="state" placeholder="State" class="form-control" required>
+      </div>
 
-      <label for="textinput">
-        <b>Postal Code</b>
-      </label>
-      <input type="text" class="form-control" id="postalCode" placeholder="Post Code" required>
+      <div>
+        <label for="textinput">
+          <b>Postal Code</b>
+        </label>
+        <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
+      </div>
 
-      <label for="email">
-        <b>Email</b>
-      </label>
-      <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+      <div>
+        <label for="email">
+          <b>Email</b>
+        </label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+      </div>
 
-      <label for="psw">
-        <b>Password</b>
-      </label>
-      <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+      <div>
+        <label for="psw">
+          <b>Password</b>
+        </label>
+        <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+      </div>
 
-      <label for="psw-repeat">
-        <b>Repeat Password</b>
-      </label>
-      <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+      <div>
+        <label for="psw-repeat">
+          <b>Repeat Password</b>
+        </label>
+        <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+      </div>
 
-      <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-      </label>
+      <div>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+        </label>
+        <b> Remember me</b>
+      </div>
 
-      <p>By creating an account you agree to our
-        <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <div>
+        <p>By creating an account you agree to our
+          <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      </div>
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+
+      <div>
         <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
       </div>
-  </div>
+    </div>
   </form>
-  </div>
+
+
+</div>
