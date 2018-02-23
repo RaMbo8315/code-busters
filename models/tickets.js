@@ -6,8 +6,8 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     },
     comments: DataTypes.TEXT,
-    inStatus: DataTypes.BOOLEAN,
-    complete: DataTypes.BOOLEAN
+    open: DataTypes.BOOLEAN,
+    closed: DataTypes.BOOLEAN
   });
 
   Tickets.associate = function (models) {
