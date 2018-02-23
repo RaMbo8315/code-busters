@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">WRKBXLY</a>
+      <a class="navbar-brand" href="#">WRKBXLY Admin Dashboard</a>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -43,17 +43,14 @@
         </li>
         <li>
           <!-- Create Ticket Side Nav -->
-          <!-- <a href="http://bootstrapzero.com" target="_ext">Themes</a> -->
-          <button type="button" class="btn btn-success btn-lg" id="ceateATicket" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create Ticket</button>
+
+          <button type="button" class="btn btn-success btn-md" id="ceateATicket" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Create Ticket</button>
 
           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h2 class="modal-title" id="exampleModalLabel">Service Ticket Form</h2>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
                 <div class="modal-body">
                   <form>
@@ -88,322 +85,362 @@
                   </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" id="modalSubmitBtn" class="btn btn-primary" data-dismiss="modal">Submit Ticket</button>
+                  <button type="button" id="modalCloseBtn" class="btn btn-primary btn-md btn-block" data-dismiss="modal">Close</button>
+                  <button type="button" id="modalSubmitBtn" class="btn btn-secondary btn-md btn-block" data-dismiss="modal">Submit Ticket</button>
                 </div>
               </div>
             </div>
           </div>
         </li>
 
+        <li>
+          {{!--
+          <a href="http://bootstrap.theme.cards" target="_ext">Analytics</a> --}}
+          <!-- Registration Form -->
+          <p onclick="document.getElementById('id01').style.display='block'">
+            <a href="#"> Create an Account </a>
+          </p>
+          <!-- The Modal (contains the Sign Up form) -->
+          <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
+            <form class="modal-content" action="index">
+              <div class="container">
+                <h2>
+                  <b>Sign Up For An Account</b>
+                </h2>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <div>
+                  <label for="firstName">
+                    <b>First Name</b>
+                  </label>
+                  <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+                </div>
 
+                <div>
+                  <label for="lastName">
+                    <b>Last Name</b>
+                  </label>
+                  <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+                </div>
 
-        {{!--
-        <a href="http://bootstrap.theme.cards" target="_ext">Analytics</a> --}}
-        <!-- Registration Form -->
+                <div>
+                  <label for="phoneNumber">
+                    <b>Phone Number</b>
+                  </label>
+                  <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
+                </div>
 
-        <!-- The Modal (contains the Sign Up form) -->
-        <p onclick="document.getElementById('id01').style.display='block'">
-          <a href="#">Create an Account</a>
-        </p>
+                <div>
+                  <label for="textinput">
+                    <b>Address Line 1</b>
+                  </label>
+                  <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+                </div>
 
-        <div id="id01" class="modal">
-          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
-          <form class="modal-content" action="index">
-            <div class="container">
-              <h2>
-                <b>Sign Up For An Account</b>
-              </h2>
-              <p>Please fill in this form to create an account.</p>
-              <hr>
-              <div>
-                <label for="firstName">
-                  <b>First Name</b>
-                </label>
-                <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+                <div>
+                  <label for="textinput">
+                    <b>Address Line 2</b>
+                  </label>
+                  <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>
+                </div>
+
+                <div>
+                  <label for="textinput">
+                    <b>City</b>
+                  </label>
+                  <input type="text" id="city" placeholder="City" class="form-control" required>
+                </div>
+
+                <div>
+                  <label for="textinput">
+                    <b>State</b>
+                  </label>
+                  <input type="text" id="state" placeholder="State" class="form-control" required>
+                </div>
+
+                <div>
+                  <label for="textinput">
+                    <b>Postal Code</b>
+                  </label>
+                  <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
+                </div>
+
+                <div>
+                  <label for="email">
+                    <b>Email</b>
+                  </label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+                </div>
+
+                <div>
+                  <label for="psw">
+                    <b>Password</b>
+                  </label>
+                  <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+                </div>
+
+                <div>
+                  <label for="psw-repeat">
+                    <b>Repeat Password</b>
+                  </label>
+                  <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+                </div>
+
+                <div>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                  </label>
+                  <b> Remember me</b>
+                </div>
+
+                <div>
+                  <p>By creating an account you agree to our
+                    <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                </div>
+
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+
+                <div>
+                  <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
+                </div>
               </div>
+            </form>
+          </div>
+        </li>
+        </ul>
 
-              <div>
-                <label for="lastName">
-                  <b>Last Name</b>
-                </label>
-                <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
-              </div>
+        {{!-- NAV Bar --}} {{!--
+        <div> --}}
+          <ul class="nav nav-sidebar">
+            <li>
+              <a href="" id="viewAllTech">View All Techs </a>
+            </li>
+            <li>
+              <a href="" id="viewAllClients">View All Clients</a>
+            </li>
+            <li>
+              <a href="" id="viewTicketsById">View Tickets By Id</a>
+            </li>
+            <li>
+              <a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a>
+            </li>
+            <li>
+              <a href="">More navigation</a>
+            </li>
+          </ul>
+        </div>
+        {{!-- </ul> --}} {{!-- </div> --}}
 
-              <div>
-                <label for="phoneNumber">
-                  <b>Phone Number</b>
-                </label>
-                <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
-              </div>
+    <div class="col-sm-9 col-md-10 main">
 
-              <div>
-                <label for="textinput">
-                  <b>Address Line 1</b>
-                </label>
-                <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
-              </div>
+      <!--toggle sidebar button-->
+      <p class="visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+        </button>
+      </p>
 
-              <div>
-                <label for="textinput">
-                  <b>Address Line 2</b>
-                </label>
-                <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>
-              </div>
+      <h1 class="page-header">
+        WRKBXLY Dashboard
+        <!-- <p class="lead">(
+              <a href="http://www.bootply.com/128936">with off-canvas sidebar</a>)</p> -->
+      </h1>
 
-              <div>
-                <label for="textinput">
-                  <b>City</b>
-                </label>
-                <input type="text" id="city" placeholder="City" class="form-control" required>
-              </div>
-
-              <div>
-                <label for="textinput">
-                  <b>State</b>
-                </label>
-                <input type="text" id="state" placeholder="State" class="form-control" required>
-              </div>
-
-              <div>
-                <label for="textinput">
-                  <b>Postal Code</b>
-                </label>
-                <input type="text" class="form-control" id="postalCode" placeholder="Postal Code" required>
-              </div>
-
-              <div>
-                <label for="email">
-                  <b>Email</b>
-                </label>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
-              </div>
-
-              <div>
-                <label for="psw">
-                  <b>Password</b>
-                </label>
-                <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
-              </div>
-
-              <div>
-                <label for="psw-repeat">
-                  <b>Repeat Password</b>
-                </label>
-                <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
-              </div>
-
-              <div>
-                <label>
-                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
-                </label>
-                <b> Remember me</b>
-              </div>
-
-              <div>
-                <p>By creating an account you agree to our
-                  <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-              </div>
-
-              <div class="clearfix">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-              </div>
-
-              <div>
-                <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
+      <!-- First Circle that Displays Open Ticket -->
+      {{!--
+      <div class="col-xs-6 col-sm-3 placeholder text-center">
+        <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
+        <h4>Open Tickets</h4> --}}
+        <div class="col-lg-3 col-md-6">
+          <div class="btn btn-primary">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-comments fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">26</div>
+                  <div>Open Tickets</div>
+                </div>
               </div>
             </div>
-          </form>
+            <a href="#" id="adminViewAllTickets">
+              <div class="panel-footer">
+                <span class="pull-left">Open Tickets</span>
+                <span class="pull-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+            </a>
+          </div>
         </div>
-
-
-        {{!-- NAV Bar --}}
-        <div>
-          </li>
-          <li>
-            <a href="https://wrapbootstrap.com?ref=skelly" target="_ext">Export</a>
-          </li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li>
-          <a href="" id="viewAllTech">View All Techs </a>
-        </li>
-        <li>
-          <a href="" id="viewAllClients">View All Clients</a>
-        </li>
-        <li>
-          <a href="" id="viewTicketsById">View Tickets By Id</a>
-        </li>
-        <li>
-          <a href="">Another nav item</a>
-        </li>
-        <li>
-          <a href="">More navigation</a>
-        </li>
-      </ul>
-      <ul class="nav nav-sidebar">
-        <li>
-          <a href="">Nav item again</a>
-        </li>
-        <li>
-          <a href="">One more nav</a>
-        </li>
-        <li>
-          <a href="">Another nav item</a>
-        </li>
-      </ul>
-
-      </div>
-      </span>
-
-
-      <div class="col-sm-9 col-md-10 main">
-
-        <!--toggle sidebar button-->
-        <p class="visible-xs">
-          <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
-            <i class="glyphicon glyphicon-chevron-left"></i>
-          </button>
-        </p>
-
-        <h1 class="page-header">
-          WRKBXLY Dashboard
-          <!-- <p class="lead">(
-              <a href="http://www.bootply.com/128936">with off-canvas sidebar</a>)</p> -->
-        </h1>
-
-
-        <!-- First Circle that Displays Open Ticket -->
-        <div class="col-xs-6 col-sm-3 placeholder text-center">
-          <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-          <h4>Open Tickets</h4>
-          <a href="" id="adminViewAllTickets"> Open Tickets</a>
-        </div>
+        {{!--
+        <a href="" id="adminViewAllTickets"> Open Tickets</a> --}}
 
         <!-- Second Circle that Displays Assigned Tickets -->
-        <div class="col-xs-6 col-sm-3 placeholder text-center">
-          <img src="http://via.placeholder.com/200/6666ff/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-          <h4>Assigned Tickets</h4>
-          <a href="" id="adminAssignedTickets">Assigned Tickets</a>
+        <div class="col-lg-3 col-md-6">
+          <div class="btn btn-danger">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-tasks fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">12</div>
+                  <div>Assigned Tickets</div>
+                </div>
+              </div>
+            </div>
+            <a href="#" id="adminAssignedTickets">
+              <div class="panel-footer">
+                <span class="pull-left">Assigned Tickets</span>
+                <span class="pull-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+            </a>
+          </div>
         </div>
+        {{!--
+        <h4>Assigned Tickets</h4>
+        <a href="" id="adminAssignedTickets">Assigned Tickets</a> --}}
+
 
         <!-- Third Circle that Displays Completed Tickets -->
-        <div class="col-xs-6 col-sm-3 placeholder text-center">
-          <img src="http://via.placeholder.com/200/66ff66/fff" class="center-block img-responsive img-circle" alt="Generic placeholder thumbnail">
-          <h4>Completed Tickets</h4>
-          <a href="" id="adminCompletedTickets">Completed Tickets</a>
+        <div class="col-lg-3 col-md-6">
+          <div class="btn btn-success">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col-xs-3">
+                  <i class="fa fa-shopping-cart fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                  <div class="huge">124</div>
+                  <div>Completed Tickets</div>
+                </div>
+              </div>
+            </div>
+            <a href="#" href="" id="adminCompletedTickets">
+              <div class="panel-footer">
+                <span class="pull-left">Completed Tickets</span>
+                <span class="pull-right">
+                  <i class="fa fa-arrow-circle-right"></i>
+                </span>
+                <div class="clearfix"></div>
+              </div>
+            </a>
+          </div>
         </div>
+        {{!--
+        <h4>Completed Tickets</h4>
+        <a href="" id="adminCompletedTickets">Completed Tickets</a> --}}
       </div>
-
-      <hr>
-
-      <h2 class="sub-header">Ticket List</h2>
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Ticket Number</th>
-              <th>Date Created</th>
-              <th>Client Name</th>
-              <th>Assigned Tech</th>
-              <th>Ticket Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td id="ticketNumber">
-                <a>1001</a>
-              </td>
-              <td id="dateCreated">
-                <a>01/03/2018</a>
-              </td>
-              <td id="clientName">
-                <a>Ipsum Corp.</a>
-              </td>
-              <td id="assignedTech">
-                <a>Tommy Davis</a>
-              </td>
-              <td id="ticketStatus">
-                <a>complete</a>
-              </td>
-            </tr>
-            <tr>
-              <td>1002</td>
-              <td>01/13/2018</td>
-              <td>Ipsum Corp.</td>
-              <td>Jacob Teel</td>
-              <td>complete</td>
-            </tr>
-            <tr>
-              <td>1003</td>
-              <td>01/15/2018</td>
-              <td>Cloud LLC.</td>
-              <td>Lisa Tims</td>
-              <td>complete</td>
-            </tr>
-            <tr>
-              <td>1004</td>
-              <td>01/20/2018</td>
-              <td>Cloud LLC.</td>
-              <td>Tommy Davis</td>
-              <td>complete</td>
-            </tr>
-            <tr>
-              <td>1005</td>
-              <td>01/23/2018</td>
-              <td>Pike Company</td>
-              <td>Kevin John</td>
-              <td>In Progress</td>
-            </tr>
-            <tr>
-              <td>1006</td>
-              <td>01/25/2018</td>
-              <td>Pike Company</td>
-              <td>Karla Long</td>
-              <td>complete</td>
-            </tr>
-            <tr>
-              <td>1007</td>
-              <td>02/5/2018</td>
-              <td>Ipsum Corp.</td>
-              <td>Tommy Davis</td>
-              <td>In Progress</td>
-            </tr>
-            <tr>
-              <td>1008</td>
-              <td>02/14/2018</td>
-              <td>Ipsum Corp.</td>
-              <td>Tommy Davis</td>
-              <td>In Progress</td>
-            </tr>
-            <tr>
-              <td>1009</td>
-              <td>02/17/2018</td>
-              <td>Ipsum Corp.</td>
-              <td>Tommy Davis</td>
-              <td>Open</td>
-            </tr>
-            <tr>
-              <td>1010</td>
-              <td>02/17/2018</td>
-              <td>Cloud LLC.</td>
-              <td>Kevin John</td>
-              <td>Open</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-
-      <a href="http://www.bootply.com/gkTHCwjLO9">Get the Source Code</a> |
-      <a href="http://bootstrap.theme.cards">More free Bootstrap themes</a>
-
     </div>
-    </row>
-  </div>
-</div>
-</container>
 
-<footer>
-  <p class="pull-right">©2016 Company</p>
-</footer>
+    <hr>
+  </div>
+  <h2 class="sub-header">Ticket List</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ticket Number</th>
+          <th>Date Created</th>
+          <th>Client Name</th>
+          <th>Assigned Tech</th>
+          <th>Ticket Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td id="ticketNumber">
+            <a>1001</a>
+          </td>
+          <td id="dateCreated">
+            <a>01/03/2018</a>
+          </td>
+          <td id="clientName">
+            <a>Ipsum Corp.</a>
+          </td>
+          <td id="assignedTech">
+            <a>Tommy Davis</a>
+          </td>
+          <td id="ticketStatus">
+            <a>complete</a>
+          </td>
+        </tr>
+        <tr>
+          <td>1002</td>
+          <td>01/13/2018</td>
+          <td>Ipsum Corp.</td>
+          <td>Jacob Teel</td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>1003</td>
+          <td>01/15/2018</td>
+          <td>Cloud LLC.</td>
+          <td>Lisa Tims</td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>1004</td>
+          <td>01/20/2018</td>
+          <td>Cloud LLC.</td>
+          <td>Tommy Davis</td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>1005</td>
+          <td>01/23/2018</td>
+          <td>Pike Company</td>
+          <td>Kevin John</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>1006</td>
+          <td>01/25/2018</td>
+          <td>Pike Company</td>
+          <td>Karla Long</td>
+          <td>complete</td>
+        </tr>
+        <tr>
+          <td>1007</td>
+          <td>02/5/2018</td>
+          <td>Ipsum Corp.</td>
+          <td>Tommy Davis</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>1008</td>
+          <td>02/14/2018</td>
+          <td>Ipsum Corp.</td>
+          <td>Tommy Davis</td>
+          <td>In Progress</td>
+        </tr>
+        <tr>
+          <td>1009</td>
+          <td>02/17/2018</td>
+          <td>Ipsum Corp.</td>
+          <td>Tommy Davis</td>
+          <td>Open</td>
+        </tr>
+        <tr>
+          <td>1010</td>
+          <td>02/17/2018</td>
+          <td>Cloud LLC.</td>
+          <td>Kevin John</td>
+          <td>Open</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p class="pull-right">©WRKBOXLY Company</p>
+  </footer>
