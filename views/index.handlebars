@@ -1,5 +1,5 @@
-
-<h1>WRKBXLY </h1>
+<h1>
+  WRKBXLY </h1>
 
 <div class="container">
   <div class="card card-container">
@@ -8,10 +8,10 @@
         <div class="col-sm-6 nav-tab-holder">
           <ul class="nav nav-tabs row" role="tablist">
             <li role="presentation" class="active col-sm-6">
-              <a href="/" aria-controls="home" >User</a>
+              <a href="/" aria-controls="home">User</a>
             </li>
             <li role="presentation" class="col-sm-6">
-              <a href="/admin" aria-controls="admin" >Admin</a>
+              <a href="/admin" aria-controls="admin">Admin</a>
             </li>
           </ul>
         </div>
@@ -24,11 +24,8 @@
         <div class="col-sm-12 mobile-pull">
           <article role="login">
             <h3 class="text-center">
-              <i class="fa fa-lock"></i> User Sign In</h3>
+              <i class="fa fa-lock"></i> Client Sign In</h3>
             <form class="signup" action="index.html" method="post">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="User Name">
-              </div>
               <div class="form-group">
                 <input type="email" class="form-control" placeholder="Email Address">
               </div>
@@ -47,12 +44,98 @@
                 </div>
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-success btn-block" value="SUBMIT">
+                <input type="submit" class="btn btn-success btn-block" id="clientLoginBtn" value="SUBMIT">
               </div>
             </form>
+             <div>
+                  <!-- Button to open the modal -->
+                  <button onclick="document.getElementById('id01').style.display='block'">Create an Account</button>
+                </div>
           </article>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Registration Form -->
+
+  <!-- The Modal (contains the Sign Up form) -->
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
+    <form class="modal-content" action="index.html">
+      <div class="container">
+        <h2>
+          <b>Sign Up</b>
+        </h2>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+        <label for="firstName">
+          <b>First Name</b>
+        </label>
+        <input type="text" class="form-control" id="firstname" placeholder="First name" required>
+
+        <label for="lastName">
+          <b>Last Name</b>
+        </label>
+        <input type="text" class="form-control" id="lastname" placeholder="Last name" required>
+
+        <label for="phoneNumber">
+          <b>Phone Number</b>
+        </label>
+        <input class="form-control" type="tel" id="telephone" placeholder="1(555)555-5555" required>
+        
+        <label for="textinput">
+          <b>Address Line 1</b>
+          <input type="text" id="address1" placeholder="Address Line 1" class="form-control" required>
+
+      <label for="textinput">
+        <b>Address Line 2</b></label>
+          <input type="text" id="address2" placeholder="Address Line 2" class="form-control" required>  
+
+      
+        <label for="textinput">
+          <b>City</b></label>
+          <input type="text" id="city" placeholder="City" class="form-control" required>
+     
+
+      <label for="textinput">
+        <b>State</b>
+      </label>
+      <input type="text" class="form-group" id="state" placeholder="State" class="form-control" required>
+
+
+      <label for="textinput">
+        <b>Postal Code</b>
+      </label>
+      <input type="text" class="form-control" id="postalCode" placeholder="Post Code" required>
+
+      <label for="email">
+        <b>Email</b>
+      </label>
+      <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+
+      <label for="psw">
+        <b>Password</b>
+      </label>
+      <input type="password" class="form-control" id="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat">
+        <b>Repeat Password</b>
+      </label>
+      <input type="password" class="form-control" placeholder="Repeat Password" name="psw-repeat" required>
+
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our
+        <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
+      </div>
+  </div>
+  </form>
+  </div>
