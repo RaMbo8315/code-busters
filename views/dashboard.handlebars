@@ -59,20 +59,24 @@
                     <div class="modal-body">
                       <form>
                         <div class="form-group">
-                          <label for="user-name" class="form-control-label">User Name:</label>
-                          <input type="text" class="form-control" id="user-name">
+                          <label for="user-name" class="form-control-label">Client Name:</label>
+                          <input type="text" class="form-control" id="clientId">
                         </div>
                         <div class="form-group">
-                          <label for="service-reason" class="form-control-label">Service Reason:</label>
-                          <input type="text" class="form-control" id="service-reason">
+                          <label for="service-reason" class="form-control-label">Assigned Tech:</label>
+                          <input type="text" class="form-control" id="assignedTech">
                           <form>
                             <div class="form-group">
                               <label for="sel1">Select Service Reasons (select one):</label>
                               <select class="form-control" id="selected-service">
-                                <option>Ticket Issue 1</option>
-                                <option>Ticket Issue 2</option>
-                                <option>Ticket Issue 3</option>
-                                <option>Ticket Issue 4</option>
+                                <option>Break-Fix</option>
+                                <option>Multimedia Setup</option>
+                                <option>Applications Update</option>
+                                <option>Service Connection</option>
+                                <option>Network Setup</option>
+                                <option>Security Update</option>
+                                <option>System Patch/ Refresh</option>
+                                <option>General Question</option>
                               </select>
                               <br>
                             </div>
@@ -86,7 +90,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Submit Ticket</button>
+                      <button type="button" id="modalSubmitBtn" class="btn btn-primary" data-dismiss="modal">Submit Ticket</button>
                     </div>
                   </div>
                 </div>
