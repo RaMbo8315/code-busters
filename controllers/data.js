@@ -39,8 +39,8 @@ module.exports = {
         });
     },
 
-    createAgent: function (req, res) {
-        db.Agents.create({
+    createTech: function (req, res) {
+        db.Techs.create({
             name: req.body.name,
             phone_number: req.body.phone_number,
             user_name: req.body.user_name,

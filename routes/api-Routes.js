@@ -10,7 +10,7 @@ module.exports = function (app) {
 
     app.get("/api/admin", dataControllers.allTickets);
 
-    app.post("/api/createAgents", dataControllers.createAgent);
+    app.post("/api/createAgents", dataControllers.createTech);
 
     app.post("/api/createClient", dataControllers.createClient)
 
