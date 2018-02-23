@@ -103,13 +103,13 @@
         <!-- Registration Form -->
 
         <!-- The Modal (contains the Sign Up form) -->
-        <div>
-          <!-- Button to open the modal -->
-          <button type="button" class="btn btn-success btn-lg" onclick="document.getElementById('id01').style.display='block'">Create Client Account</button>
-        </div>
+        <p onclick="document.getElementById('id01').style.display='block'">
+          <a href="#">Create an Account</a>
+        </p>
+
         <div id="id01" class="modal">
           <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
-          <form class="modal-content" action="index.html">
+          <form class="modal-content" action="index">
             <div class="container">
               <h2>
                 <b>Sign Up For An Account</b>
@@ -215,7 +215,7 @@
             </div>
           </form>
         </div>
-     
+
 
         {{!-- NAV Bar --}}
         <div>
@@ -255,6 +255,7 @@
 
       </div>
       </span>
+
 
       <div class="col-sm-9 col-md-10 main">
 
