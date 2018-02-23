@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-</div>
+
     <script>
       $(document).ready(function () {
         $("#myBtn").click(function () {
@@ -71,8 +71,8 @@
         });
       });
     </script>
-
   </div>
+</div>
 
 {{!-- </div>
 </div>
@@ -82,13 +82,14 @@
 
 <!-- Registration Form -->
 
-<!-- The Modal (contains the Sign Up form) -->
+<!-- Button to open the modal -->
+
 <div id="id01" class="modal">
-  <div onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</div>
-  <form class="modal-content" action="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">CLOSE</span>
+  <form class="modal-content" action="index">
     <div class="container">
       <h2>
-        <b>Create an Account</b>
+        <b>Sign Up For An Account</b>
       </h2>
       <p>Please fill in this form to create an account.</p>
       <hr>
@@ -183,13 +184,9 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      </div>
-
-      <div>
         <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
       </div>
     </div>
   </form>
-
 
 </div>
