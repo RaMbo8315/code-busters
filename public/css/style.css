@@ -45,12 +45,16 @@ align-content: center;
   background: #23bab5;
   border-radius:0;
   border: 2px solid #23bab5;
+  padding: 10px;
+  margin: 10px;
 }
 
 .btn-success:hover,.btn-success:focus {
   background: rgba(26, 161, 157, 0);
   border: 2px solid #1aa19d;
   color: #23BAB5;
+  padding: 10px;
+  margin: 10px;
 }
 
 a {
@@ -61,10 +65,10 @@ a {
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box}
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email], input[type=tel] {
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  /* margin: 20px 0 22px 0; */
   display: inline-block;
   border: none;
   background: #f1f1f1;
@@ -72,7 +76,7 @@ input[type=text], input[type=password] {
 }
 
 /* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=tel]:focus  {
   background-color: #ddd;
   outline: none;
 }
