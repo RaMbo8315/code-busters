@@ -53,7 +53,7 @@
                   <h2 class="modal-title" id="exampleModalLabel">Service Ticket Form</h2>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form id = "ticketModal">
                     <div class="form-group">
                       <label for="user-name" class="form-control-label">Client Name:</label>
                       <input type="text" class="form-control" id="clientId">
@@ -98,7 +98,7 @@
           <a href="http://bootstrap.theme.cards" target="_ext">Analytics</a> --}}
           <!-- Registration Form -->
           <p onclick="document.getElementById('id01').style.display='block'">
-            <a href="#"> Create an Account </a>
+            <a href="#" id="createanAccount"> Create an Account </a>
           </p>
           <!-- The Modal (contains the Sign Up form) -->
           <div id="id01" class="modal">
@@ -200,9 +200,9 @@
                 </div>
 
                 <div class="clearfix">
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" id="cancelbtn" class="cancelbtn">Cancel</button>
                 </div>
-
+<br>
                 <div>
                   <button type="submit" class="signup" id="createAccountBtn">Create an Account</button>
                 </div>
@@ -344,103 +344,104 @@
 
     <hr>
   </div>
-  <h2 class="sub-header">Ticket List</h2>
-  <div class="table-responsive">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Ticket Number</th>
-          <th>Date Created</th>
-          <th>Client Name</th>
-          <th>Assigned Tech</th>
-          <th>Ticket Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="ticketNumber">
-            <a>1001</a>
-          </td>
-          <td id="dateCreated">
-            <a>01/03/2018</a>
-          </td>
-          <td id="clientName">
-            <a>Ipsum Corp.</a>
-          </td>
-          <td id="assignedTech">
-            <a>Tommy Davis</a>
-          </td>
-          <td id="ticketStatus">
-            <a>complete</a>
-          </td>
-        </tr>
-        <tr>
-          <td>1002</td>
-          <td>01/13/2018</td>
-          <td>Ipsum Corp.</td>
-          <td>Jacob Teel</td>
-          <td>complete</td>
-        </tr>
-        <tr>
-          <td>1003</td>
-          <td>01/15/2018</td>
-          <td>Cloud LLC.</td>
-          <td>Lisa Tims</td>
-          <td>complete</td>
-        </tr>
-        <tr>
-          <td>1004</td>
-          <td>01/20/2018</td>
-          <td>Cloud LLC.</td>
-          <td>Tommy Davis</td>
-          <td>complete</td>
-        </tr>
-        <tr>
-          <td>1005</td>
-          <td>01/23/2018</td>
-          <td>Pike Company</td>
-          <td>Kevin John</td>
-          <td>In Progress</td>
-        </tr>
-        <tr>
-          <td>1006</td>
-          <td>01/25/2018</td>
-          <td>Pike Company</td>
-          <td>Karla Long</td>
-          <td>complete</td>
-        </tr>
-        <tr>
-          <td>1007</td>
-          <td>02/5/2018</td>
-          <td>Ipsum Corp.</td>
-          <td>Tommy Davis</td>
-          <td>In Progress</td>
-        </tr>
-        <tr>
-          <td>1008</td>
-          <td>02/14/2018</td>
-          <td>Ipsum Corp.</td>
-          <td>Tommy Davis</td>
-          <td>In Progress</td>
-        </tr>
-        <tr>
-          <td>1009</td>
-          <td>02/17/2018</td>
-          <td>Ipsum Corp.</td>
-          <td>Tommy Davis</td>
-          <td>Open</td>
-        </tr>
-        <tr>
-          <td>1010</td>
-          <td>02/17/2018</td>
-          <td>Cloud LLC.</td>
-          <td>Kevin John</td>
-          <td>Open</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
 
-  <footer>
-    <p class="pull-right">©WRKBOXLY Company</p>
-  </footer>
+<h2 class="sub-header"><b><center>Ticket List</center></b></h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Ticket Number</th>
+        <th>Date Created</th>
+        <th>Client Name</th>
+        <th>Assigned Tech</th>
+        <th>Ticket Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="ticketNumber">
+          <a>1001</a>
+        </td>
+        <td id="dateCreated">
+          <a>01/03/2018</a>
+        </td>
+        <td id="clientName">
+          <a>Ipsum Corp.</a>
+        </td>
+        <td id="assignedTech">
+          <a>Tommy Davis</a>
+        </td>
+        <td id="ticketStatus">
+          <a>complete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>01/13/2018</td>
+        <td>Ipsum Corp.</td>
+        <td>Jacob Teel</td>
+        <td>complete</td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>01/15/2018</td>
+        <td>Cloud LLC.</td>
+        <td>Lisa Tims</td>
+        <td>complete</td>
+      </tr>
+      <tr>
+        <td>1004</td>
+        <td>01/20/2018</td>
+        <td>Cloud LLC.</td>
+        <td>Tommy Davis</td>
+        <td>complete</td>
+      </tr>
+      <tr>
+        <td>1005</td>
+        <td>01/23/2018</td>
+        <td>Pike Company</td>
+        <td>Kevin John</td>
+        <td>In Progress</td>
+      </tr>
+      <tr>
+        <td>1006</td>
+        <td>01/25/2018</td>
+        <td>Pike Company</td>
+        <td>Karla Long</td>
+        <td>complete</td>
+      </tr>
+      <tr>
+        <td>1007</td>
+        <td>02/5/2018</td>
+        <td>Ipsum Corp.</td>
+        <td>Tommy Davis</td>
+        <td>In Progress</td>
+      </tr>
+      <tr>
+        <td>1008</td>
+        <td>02/14/2018</td>
+        <td>Ipsum Corp.</td>
+        <td>Tommy Davis</td>
+        <td>In Progress</td>
+      </tr>
+      <tr>
+        <td>1009</td>
+        <td>02/17/2018</td>
+        <td>Ipsum Corp.</td>
+        <td>Tommy Davis</td>
+        <td>Open</td>
+      </tr>
+      <tr>
+        <td>1010</td>
+        <td>02/17/2018</td>
+        <td>Cloud LLC.</td>
+        <td>Kevin John</td>
+        <td>Open</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <p class="pull-right">©WRKBOXLY Company</p>
+</footer>

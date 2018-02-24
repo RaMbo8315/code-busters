@@ -44,6 +44,10 @@ button:hover {
   background-color: #f44336;
 }
 
+#cancelbtn,{
+align-self: auto;
+}
+
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
  text-align: center;
