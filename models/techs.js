@@ -12,7 +12,7 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isemail: true
+                isEmail: true
             }
         },
         password: DataTypes.STRING

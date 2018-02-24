@@ -16,7 +16,7 @@ module.exports = {
             assigned_to: req.body.assigned_to,
             service: req.body.service,
             comments: req.body.comments,
-            inStatus: re.body.inStatus,
+            inStatus: req.body.inStatus,
             complete: req.body.complete
         }).then(function (dbTicket) {
             res.json(dbTicket);
@@ -44,9 +44,26 @@ module.exports = {
             name: req.body.name,
             phone_number: req.body.phone_number,
             user_name: req.body.user_name,
-            password: re.body.password
-        }).then(function (dbTicket) {
-            res.json(dbAgent);
+            password: req.body.password
+        }).then(function (dbTech) {
+            res.json(dbTech);
+        });
+    },
+
+    allAdmins: function (req, res) {
+        db.Admin.findAll({}).then(function (dbAdmin) {
+            res.json(dbAdmin);
+        });
+    },
+
+    createAdmin: function (req, res) {
+        db.Admin.create({
+            name: req.body.name,
+            phone_number: req.body.phone_number,
+            user_name: req.body.user_name,
+            password: req.body.password
+        }).then(function (dbAdmin) {
+            res.json(dbAdmin);
         });
     },
 
@@ -56,7 +73,7 @@ module.exports = {
             address: req.body.address,
             phone_number: req.body.phone_number,
             user_name: req.body.user_name,
-            password: re.body.password
+            password: req.body.password
         }).then(function (dbClient) {
             res.json(dbClient);
         });
