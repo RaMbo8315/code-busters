@@ -10,11 +10,15 @@ module.exports = function (app) {
 
     app.get("/api/admin", dataControllers.allTickets);
 
-    app.post("/api/createAgents", dataControllers.createTech);
+    app.post("/api/createTechs", dataControllers.createTech);
+
+    app.get("/api/allAdmins", dataControllers.allAdmins);
+
+    app.post("/api/createAdmin", dataControllers.createAdmin);
 
     app.post("/api/createClient", dataControllers.createClient)
 
-    app.get("/api/createClient", dataControllers.allClients)
+    app.get("/api/allClient", dataControllers.allClients)
 
-    app.get("/api/createClient", dataControllers.findClient)
+    app.get("/api/findClient", dataControllers.findClient)
 }
