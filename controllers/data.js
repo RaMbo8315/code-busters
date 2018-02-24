@@ -69,11 +69,11 @@ module.exports = {
 
     createClient: function (req, res) {
         db.Clients.create({
-            name: req.body.name,
-            address: req.body.address,
-            phone_number: req.body.phone_number,
-            user_name: req.body.user_name,
-            password: req.body.password
+            name: "john",
+            address: "6573 abercrombie ct",
+            phone_number: 4074463684,
+            user_name: "john@gmail.com",
+            password: "jdhfjdshfj"
         }).then(function (dbClient) {
             res.json(dbClient);
         });

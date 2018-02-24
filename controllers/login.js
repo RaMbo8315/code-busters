@@ -1,6 +1,13 @@
 
 module.exports = {
     renderClient: function(req, res){
+
+        // exports.signup = function(req, res) {
+ 
+        //     res.render('signup');
+         
+        // }
+
         res.render("index", {css: ['style.css']});
     },
     renderAdmin: function(req, res){
@@ -13,4 +20,14 @@ module.exports = {
     renderClientDash: function(req, res){
         res.render("clientdashboard", {css: ['modal.css','styles.css', 'bootstrap.min.css']});
     }
+
 };
+
+exports.logout = function(req, res) {
+ 
+    req.session.destroy(function(err) {
+ 
+        res.redirect('/');
+ 
+    });
+}
